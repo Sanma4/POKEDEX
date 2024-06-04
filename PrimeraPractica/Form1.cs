@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace PrimeraPractica
 {
-    public partial class Form1 : Form
+    public partial class POKEDEX : Form
     {
-        public Form1()
+        public POKEDEX()
         {
             InitializeComponent();
+        }
+
+        private void POKEDEX_Load(object sender, EventArgs e)
+        {
+            PokemonDataBase dataBase = new PokemonDataBase();
+            dgvPokemons.DataSource = dataBase.listar();
         }
     }
 }
