@@ -23,6 +23,7 @@ namespace PrimeraPractica
             PokemonDataBase dataBase = new PokemonDataBase();
             pokemonLista = dataBase.listar();
             dgvPokemons.DataSource = pokemonLista;
+            dgvPokemons.Columns["UrlImagen"].Visible = false;
             cargarImagen(pokemonLista[0].UrlImagen);
         }
 
@@ -40,8 +41,10 @@ namespace PrimeraPractica
             }
             catch (Exception ex)
             {
-                pbxPokemon.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
+                pbxPokemon.Load("https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg");
             }
         }
+
+
     }
 }
